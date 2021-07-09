@@ -80,6 +80,12 @@ global.mysql.query("SELECT * FROM config").then(function (rows) {
             case 'blockManager':
                 require('./lib/blockManager.js');
                 break;
+            case 'altblockManager':
+                require('./lib2/altblockManager.js');
+                break;
+            case 'altblockExchange':
+                require('./lib2/altblockExchange.js');
+                break;
             case 'payments':
                 require('./lib/payments.js');
                 break;
@@ -91,6 +97,9 @@ global.mysql.query("SELECT * FROM config").then(function (rows) {
                 break;
             case 'worker':
                 require('./lib/worker.js');
+                break;
+            case 'pool_stats':
+                require('./lib/pool_stats.js');
                 break;
             case 'longRunner':
                 require('./lib/longRunner.js');

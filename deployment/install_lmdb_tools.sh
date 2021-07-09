@@ -1,9 +1,10 @@
 #!/bin/bash
 cd ~
-git clone https://github.com/LMDB/lmdb
-cd lmdb
-git checkout 4d2154397afd90ca519bfa102b2aad515159bd50
-cd libraries/liblmdb/
+rm -rf node-lmdb
+git clone https://github.com/Venemo/node-lmdb.git
+cd node-lmdb
+git checkout 5941c1e553de4ae1d57a67d355b7c2dd87feaea6
+cd dependencies/lmdb/libraries/liblmdb
 make -j `nproc`
 mkdir ~/.bin
 echo ' ' >> ~/.bashrc
